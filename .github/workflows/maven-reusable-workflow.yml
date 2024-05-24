@@ -139,7 +139,8 @@ on:
 
 jobs:
   Maven:
-    runs-on: ${{inputs.Runs_On}}
+    # runs-on: ${{inputs.Runs_On}}
+    runs-on: Ubuntu-latest
     name: Maven Project Build, Artifactory Push and Xray Scan
     steps:
       - name: Checkout Repository Code
