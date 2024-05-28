@@ -2,7 +2,8 @@ name: 'Standard AEP Workflow - Maven Build, Push, and Scan'
 on:
   ### SLS added Push & Pull.  workflow call part of original yml
   push: 
-    branches: [ main, 1-SamShoberWork-patch, 2-Feature-Branch, 3-Dev, 4-Testing, 5-Release-Branch ]
+    # branches: [ main, 1-SamShoberWork-patch, 2-Feature-Branch, 3-Dev, 4-Testing, 5-Release-Branch ]
+    - "*"
   pull_request:
     branches: [ main ]
   # workflow_dispatch:
