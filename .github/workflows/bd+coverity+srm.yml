@@ -22,7 +22,9 @@
 name: bd+coverity+srm
 on:
   push:
-    branches: [ main, 1-SamShoberWork-patch, 2-Feature-Branch, 3-Release-Branch, 4-Dev, 5-Testing, 6-Production ]
+    branches:
+    - "*"
+    # branches: [ main, 1-SamShoberWork-patch, 2-Feature-Branch, 3-Release-Branch, 4-Dev, 5-Testing, 6-Production, StreamNameAAA ]
   pull_request:
     branches: [ main, 1-SamShoberWork-patch ]
   workflow_dispatch:
