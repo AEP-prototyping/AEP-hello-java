@@ -17,13 +17,12 @@
 # secrets.SRM_APIKEY
 # secrets.GITHUB_TOKEN  #  Confirm GITHUB_TOKEN has workflow read & write permissions (GitHub → Project → Settings → Actions → General → Workflow Permissions)
 # 
-# change to force github action PR for 1-samshober-patch 2024-04-24 A
-#
+# change to force github action PR for 1-samshober-patch 2024-05-28 10.02 am 
 #
 name: bd+coverity+srm
 on:
   push:
-    # branches: [ main, 1-SamShoberWork-patch, 2-Feature-Branch, 3-Dev, 4-Testing, 5-Release-Branch ]
+    branches: [ main, 1-SamShoberWork-patch, 2-Feature-Branch, 3-Release-Branch, 4-Dev, 5-Testing, 6-Production ]
   pull_request:
     branches: [ main, 1-SamShoberWork-patch ]
   workflow_dispatch:
@@ -39,6 +38,8 @@ jobs:
         java-version: 17
         distribution: microsoft
         cache: maven
+    # - name: clean git
+      # run: rm -r .git/config
     - name: Maven Build
       run: mvn -B -DskipTests package
     - name: Clean Git
