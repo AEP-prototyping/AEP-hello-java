@@ -3,6 +3,7 @@ on:
   ### SLS added Push & Pull.  workflow call part of original yml
   push: 
     # branches: [ main, 1-SamShoberWork-patch, 2-Feature-Branch, 3-Dev, 4-Testing, 5-Release-Branch ]
+    branches:
     - "*"
   pull_request:
     branches: [ main ]
