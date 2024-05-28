@@ -77,7 +77,9 @@ jobs:
         coverity_user: ${{ secrets.COV_USER }}
         coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
         coverity_project_name: ${{ github.event.repository.name }}
-        coverity_stream_name: ${{ github.event.repository.name }}-${{ github.ref_name }}
+        # coverity_stream_name: ${{ github.event.repository.name }}-${{ github.ref_name }}
+        ### from AEP yamls  streamName="$projectName($branch)" which basically where projectname is "github.event.repository.name" and branch is github.ref_name.
+        coverity_stream_Name=${{ github.event.repository.name }}(${{ github.ref_name }})
         # coverity_policy_view: 'Outstanding Issues'
     - name: Coverity PR Scan
       if: ${{ github.event_name == 'pull_request' }}
