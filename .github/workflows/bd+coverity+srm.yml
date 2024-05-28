@@ -38,8 +38,8 @@ jobs:
         java-version: 17
         distribution: microsoft
         cache: maven
-    - name: clean git
-      run: rm -r .git/config
+    # - name: clean git
+      # run: rm -r .git/config
     - name: Maven Build
       run: mvn -B -DskipTests package
     - name: Clean Git
