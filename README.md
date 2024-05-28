@@ -16,3 +16,6 @@ CI Integration Examples (configured for Maven)
 - [jenkins](jenkins) - example Jenkins pipelines
 - [Jenkinsfile](Jenkinsfile) - Coverity on Jenkins with full + incr scans using GitHub Branch Source plugin
 - [polaris.yml](polaris.yml) - Polaris project configuration
+
+
+## a change made to force a build and scans  2024-05-28   
