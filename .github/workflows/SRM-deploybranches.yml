@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: SRM Upload
-      if: ${{ github.event_name != 'pull_request' }}
+      # if: ${{ github.event_name != 'pull_request' }}
       if: ${{ github.event.repository.default_branch = '3-Release-Branch' }} 
       uses: 'codedx/codedx-github-action@v1.2.0'
       with:
