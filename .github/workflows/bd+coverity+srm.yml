@@ -30,7 +30,7 @@ on:
     branches: [ main, 1-SamShoberWork-patch ]
   workflow_dispatch:
 jobs:
-  synopsys:
+  Black Duck Security Scan:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Source
